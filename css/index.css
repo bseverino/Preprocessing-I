@@ -135,15 +135,16 @@ html,
 body {
   height: 100%;
   font-size: 62.5%;
+  color: black;
 }
 h1 {
-  font-size: 3rem;
+  font-size: 3.5rem;
 }
 h2 {
-  font-size: 2rem;
+  font-size: 2.5rem;
 }
 h3 {
-  font-size: 1.8rem;
+  font-size: 2rem;
 }
 p,
 a,
@@ -151,12 +152,15 @@ ul,
 table {
   font-size: 1.6rem;
 }
+a {
+  text-decoration: none;
+  color: black;
+}
 nav {
   display: flex;
   flex-direction: column;
 }
 nav a {
-  width: 100%;
   text-align: center;
   line-height: 5vh;
   border-bottom: 1px solid gray;
@@ -164,18 +168,60 @@ nav a {
 section {
   padding: 3vh 5%;
 }
-section.top {
+.top {
   background-color: lightgray;
-}
-section.top div {
   display: flex;
   flex-direction: column;
 }
-section.top div p {
-  line-height: 3vh;
+.top .title {
+  padding: 2vh 0;
 }
-section.top div .button {
+.top .button {
   padding: 10px;
-  margin: 2vh 0;
+  margin-top: 2vh;
+  width: 35%;
   background-color: gray;
+  text-align: center;
+  color: white;
+}
+.mid {
+  display: flex;
+  flex-direction: column;
+}
+.mid div {
+  padding-bottom: 3vh;
+}
+.mid div h2,
+.mid div h3 {
+  padding-bottom: 1.5vh;
+}
+.mid ul {
+  width: 100%;
+}
+.mid ul li {
+  border: 1px solid lightgray;
+  padding: 10px;
+  margin: -1px 0;
+}
+.mid table {
+  width: 100%;
+  border: 1px solid lightgray;
+}
+.mid table tr {
+  border: 1px solid lightgray;
+}
+.mid table tr th,
+.mid table tr td {
+  padding: 10px;
+  text-align: left;
+}
+.mid table tr th {
+  font-weight: bold;
+}
+.mid table tr:nth-child(even) {
+  background-color: lightgray;
+}
+footer {
+  background-color: gray;
+  color: white;
 }
