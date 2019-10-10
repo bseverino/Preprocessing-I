@@ -1,1 +1,340 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+  max-width: 100%;
+}
+@font-face {
+  font-family: 'Fjalla One';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Fjalla One'), local('FjallaOne-Regular'), url(https://fonts.gstatic.com/s/fjallaone/v7/Yq6R-LCAWCX3-6Ky7FAFrOF6lw.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Slabo 27px';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Slabo 27px'), local('Slabo27px-Regular'), url(https://fonts.gstatic.com/s/slabo27px/v6/mFT0WbgBwKPR_Z4hGN2qgx8D0A.ttf) format('truetype');
+}
+html,
+body {
+  height: 100%;
+  font-size: 62.5%;
+  color: black;
+  font-family: 'Slabo 27px', serif;
+}
+@media (min-width: 500px) {
+  html,
+  body {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+h1,
+h2,
+h3 {
+  font-family: 'Fjalla One', sans-serif;
+}
+h1 {
+  font-size: 4rem;
+}
+h2 {
+  font-size: 3rem;
+}
+h3 {
+  font-size: 2.5rem;
+}
+p,
+a,
+ul,
+table {
+  font-size: 1.6rem;
+}
+p {
+  line-height: 3vh;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+header nav {
+  display: flex;
+  flex-direction: column;
+}
+header nav a {
+  text-align: center;
+  line-height: 5vh;
+  border-bottom: 1px solid #DB7093;
+}
+@media (min-width: 500px) {
+  header nav a {
+    border: none;
+  }
+}
+header nav a:hover {
+  color: #DB7093;
+}
+@media (min-width: 500px) {
+  header nav {
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+  }
+}
+@media (min-width: 800px) {
+  header nav {
+    justify-content: space-between;
+    width: 50%;
+  }
+}
+@media (min-width: 500px) {
+  header {
+    padding: 1vh 0;
+  }
+}
+@media (min-width: 800px) {
+  header {
+    display: flex;
+    justify-content: end;
+  }
+}
+section {
+  padding: 3vh 5%;
+}
+@media (min-width: 500px) {
+  section {
+    padding: 3vh 0;
+  }
+}
+.top {
+  background-color: #FFC0CB;
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 500px) {
+  .top {
+    padding: 3vh 5%;
+  }
+}
+@media (min-width: 500px) {
+  .top .img-container {
+    width: 50%;
+  }
+}
+.top .title {
+  padding: 2vh 0;
+  line-height: 5vh;
+}
+.top .button {
+  padding: 1rem;
+  margin-top: 2vh;
+  width: 15rem;
+  background-color: #DB7093;
+  text-align: center;
+  color: white;
+}
+.top .button:hover {
+  background-color: white;
+  color: #DB7093;
+}
+.top form {
+  width: 100%;
+  padding-top: 3vh;
+  font-size: 1.6rem;
+}
+.top form .textInput {
+  display: flex;
+  flex-direction: column;
+}
+.top form .textInput input,
+.top form .textInput textarea {
+  margin: 1vh 0 1.5vh;
+}
+.mid {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 800px) {
+  .mid {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+@media (min-width: 800px) {
+  .mid .about,
+  .mid .skills {
+    width: 48%;
+  }
+}
+.mid div {
+  padding-bottom: 3vh;
+}
+.mid div h2,
+.mid div h3 {
+  padding-bottom: 1.5vh;
+}
+.mid ul {
+  width: 100%;
+}
+.mid ul li {
+  border: 1px solid #FFC0CB;
+  padding: 1rem;
+  margin: -1px 0;
+}
+.mid .history {
+  width: 100%;
+}
+.mid .history table {
+  width: 100%;
+  border: 1px solid #FFC0CB;
+}
+.mid .history table tr {
+  border: 1px solid #FFC0CB;
+}
+.mid .history table tr th,
+.mid .history table tr td {
+  padding: 1rem;
+  text-align: left;
+}
+.mid .history table tr th {
+  font-weight: bold;
+}
+.mid .history table tr:nth-child(even) {
+  background-color: #FFC0CB;
+}
+footer {
+  background-color: #DB7093;
+  color: white;
+  padding: 3vh 0;
+  text-align: center;
+}

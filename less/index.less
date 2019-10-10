@@ -50,10 +50,232 @@ table {
 
 /* Set every element's box-sizing to border-box */
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
+	max-width: 100%;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One|Slabo+27px&display=swap');
+
+@firstColor: #FFC0CB;
+@secondColor: #DB7093;
+@textColorOne: black;
+@textColorTwo: white;
+
+@fontMain: 'Slabo 27px', serif;
+@fontHeading:'Fjalla One', sans-serif;
+
+.bordered() {
+	border: 1px solid @firstColor;
+}
+
+.flexColumn() {
+	display: flex;
+	flex-direction: column;
 }
 
 html, body {
-    height: 100%;
+	height: 100%;
+	font-size: 62.5%;
+	color: @textColorOne;
+	font-family: @fontMain;
+
+	@media (min-width: 500px) {
+		width: 90%;
+		margin: 0 auto;
+	}
 }
 
+h1, h2, h3 {
+	font-family: @fontHeading;
+}
+
+h1 {
+	font-size: 4rem;
+}
+
+h2 {
+	font-size: 3rem;
+}
+
+h3 {
+	font-size: 2.5rem;
+}
+
+p, a, ul, table {
+	font-size: 1.6rem;
+}
+
+p {
+	line-height: 3vh;
+}
+
+a {
+	text-decoration: none;
+	color: @textColorOne;
+}
+
+
+header{
+
+	nav {
+		.flexColumn();
+
+		a {		
+			text-align: center;
+			line-height: 5vh;
+			border-bottom: 1px solid @secondColor;
+
+			@media (min-width: 500px) {
+				border: none;
+			}
+		} // links
+
+		a:hover {
+			color: @secondColor;
+		}
+
+		@media (min-width: 500px) {
+			flex-direction: row;
+			justify-content: space-around;
+			width: 100%;
+		}
+
+		@media (min-width: 800px) {
+			justify-content: space-between;
+			width: 50%;
+		}
+	} // nav
+
+	@media (min-width: 500px) {
+		padding: 1vh 0;
+	}
+
+	@media (min-width: 800px) {
+		display: flex;
+		justify-content: end;
+	} // desktop nav
+}
+
+section {
+	padding: 3vh 5%;
+	
+	@media (min-width: 500px) {
+		padding: 3vh 0;
+	}
+} // section styling
+
+.top {
+	background-color: @firstColor;
+	.flexColumn();
+
+	@media (min-width: 500px) {
+		padding: 3vh 5%;
+	} // tablet
+
+	.img-container {
+		@media (min-width: 500px) {
+			width: 50%;
+		}
+	} // img
+
+	.title {
+		padding: 2vh 0;
+		line-height: 5vh;
+	} // title
+
+	.button {
+		padding: 1rem;
+		margin-top: 2vh;
+		width: 15rem;
+		background-color: @secondColor;
+		text-align: center;
+		color: @textColorTwo;
+	} // button
+
+	.button:hover {
+		background-color: @textColorTwo;
+		color: @secondColor;
+	} // button hover
+
+	form {
+		width: 100%;
+		padding-top: 3vh;
+		font-size: 1.6rem;
+
+		.textInput {
+			.flexColumn();
+			
+			input, textarea {
+				margin: 1vh 0 1.5vh;
+			}
+		}
+	} // form
+	
+} // top section
+
+.mid {
+	.flexColumn();
+
+	@media (min-width: 800px) {
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	} // desktop
+
+	.about, .skills {
+		@media (min-width: 800px) {
+			width: 48%;
+		}
+	} // stack sections
+	
+	div {
+		padding-bottom: 3vh;
+
+		h2, h3 {
+			padding-bottom: 1.5vh;
+		} // headings
+	} // div
+
+	ul {
+		width: 100%;
+
+		li {
+			.bordered();
+			padding: 1rem;
+			margin: -1px 0;
+		} // list elements		
+	} // list
+
+	.history{
+		width: 100%;
+	
+			table {
+			width: 100%;
+			.bordered();		
+			
+			tr {
+				border: 1px solid @firstColor;
+				
+				th, td {
+					padding: 1rem;
+					text-align: left;
+				} // cells
+
+				th {
+					font-weight: bold;
+				}
+			} // rows
+
+			tr:nth-child(even) {
+				background-color: @firstColor;
+			} // alternate bg color
+		} // table
+	} // history
+} // mid section
+
+footer {
+	background-color: @secondColor;
+	color: @textColorTwo;
+	padding: 3vh 0;
+	text-align: center;
+} // footer
